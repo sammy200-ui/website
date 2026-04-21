@@ -79,6 +79,7 @@ export default function BlogLayout({ post, children }: IBlogLayoutProps) {
                     <time dateTime={post.date}>{dayjs(post.date).format('MMMM D, YYYY')}</time>
                     <span className='mx-1'>&middot;</span>
                     <span>{post.readingTime} min read</span>
+                  </div>
                 </div>
               </div>
             </header>
