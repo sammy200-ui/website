@@ -1,4 +1,4 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 import Link from 'next/link';
 import type { Ref } from 'react';
 import React, { forwardRef } from 'react';
@@ -113,30 +113,40 @@ const BlogPostItem = ({ post, className = '', id = '' }: BlogPostItemProps, ref:
                   <div className='relative shrink-0'>
                     <AuthorAvatars authors={post.authors} />
                   </div>
-                  <div className='ml-2'>
-                    <Heading
-                      level={HeadingLevel.h3}
-                      typeStyle={HeadingTypeStyle.xsSemibold}
-                      className='text-gray-900 dark:text-gray-100'
-                    >
-                      <span className='text-xs'>
+                  <div className='ml-3'>
+                    <Heading level={HeadingLevel.h3} typeStyle={HeadingTypeStyle.xsSemibold} className='text-gray-900 dark:text-gray-100'>
+                      <span>
                         {post.authors
-                          .map((author) => author.name)
-                          .join(', ')
-                          .split(', ')
-                          .slice(0, 2)
-                          .join(' & ')}
+                          .map((author, index) =>
+                            author.link ? (
+                              <button
+                                key={index}
+                                data-alt={author.name}
+                                className='cursor-pointer border-none bg-inherit p-0 hover:underline dark:text-gray-100'
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  window.open(author.link, '_blank');
+                                }}
+                              >
+                                {author.name}
+                              </button>
+                            ) : (
+                              author.name
+                            )
+                          )
+                          .reduce((prev, curr, index) => (
+                            <React.Fragment key={`author-${index}`}>
+                              {prev} & {curr}
+                            </React.Fragment>
+                          ))}
                       </span>
                     </Heading>
-                    <Paragraph typeStyle={ParagraphTypeStyle.sm} className='text-xs text-gray-500 dark:text-gray-400'>
-                      {post.date ? moment(post.date).format('MMMM D, YYYY') : ''}
+                    <Paragraph typeStyle={ParagraphTypeStyle.sm} className='flex text-xs text-gray-500 dark:text-gray-400'>
+                      <time dateTime={post.date}>{dayjs(post.date).format('MMMM D, YYYY')}</time>
+                      <span className='mx-1'>&middot;</span>
+                      <span>{post.readingTime} min read</span>
                     </Paragraph>
                   </div>
-                </div>
-                <div className='text-right'>
-                  <Paragraph typeStyle={ParagraphTypeStyle.sm} className='text-xs text-gray-500 dark:text-gray-400'>
-                    {post.readingTime} min
-                  </Paragraph>
                 </div>
               </div>
             </div>
