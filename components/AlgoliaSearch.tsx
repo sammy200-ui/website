@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import type { DocSearchHit, InternalDocSearchHit, StoredDocSearchHit } from '@docsearch/react';
+import type { DocSearchHit, InternalDocSearchHit, StoredDocSearchHit } from '@docsearch/react/dist/esm/types';
 import { DocSearchModal } from '@docsearch/react';
 import clsx from 'clsx';
 import Head from 'next/head';
