@@ -32,7 +32,7 @@ export default function Asyncapi3ChannelComparison({ className = '' }: AsyncAPI3
   };
 
   return (
-    <div className={`${className} flex flex-col flex-wrap gap-1 text-center md:flex-row`}>
+    <div className={`${className} comparison-wrapper flex flex-col flex-wrap gap-1 text-center md:flex-row`}>
       <div className='ml-1 flex-1 border border-black p-2'>
         <h3 className='mb-4 ml-2 font-sans text-lg font-medium'>AsyncAPI 2.x</h3>
         <div>

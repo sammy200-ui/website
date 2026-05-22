@@ -505,3 +505,21 @@ select {
 .dark .case-studies-swiper .swiper-pagination-bullet {
   background: #A87EFC;
 }
+
+/* Fix Mermaid text visibility in Dark Theme */
+.dark .mermaid text,
+.dark .mermaid .messageText {
+  fill: #B8B9C0 !important;
+}
+.dark .mermaid .actor {
+  stroke: #47BCEE !important;
+}
+
+/* Fix text contrast in Comparison diagrams on dark theme */
+.dark .comparison-wrapper div {
+  color: #111827 !important;
+  border-color: #4b5563 !important;
+}
+.dark .comparison-wrapper h3 {
+  color: #FFFFFF !important;
+}
