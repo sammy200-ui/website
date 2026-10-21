@@ -1,5 +1,9 @@
 [
     {
+        "name": "Sammy",
+        "github": "sammy200-ui"
+    },
+    {
         "name": "Aishat Muibudeen",
         "github": "Mayaleeeee",
         "linkedin": "aishatmuibudeen",
@@ -127,7 +131,7 @@
         "githubID": 1444788
     },
     {
-        "name": "Fran M\u00e9ndez",
+        "name": "Fran Méndez",
         "github": "fmvilas",
         "slack": "U34F2JRRS",
         "availableForHire": false,
@@ -248,10 +252,10 @@
         "githubID": 6995927
     },
     {
-        "name": "Maciej Urba\u0144czyk",
+        "name": "Maciej Urbańczyk",
         "github": "magicmatatjahu",
         "availableForHire": false,
-        "linkedin": "maciej-urba\u0144czyk-909547164",
+        "linkedin": "maciej-urbańczyk-909547164",
         "slack": "U01EB02BP7A",
         "company": "Travelping GmbH",
         "isTscMember": true,
@@ -508,7 +512,7 @@
         "githubID": 98899
     },
     {
-        "name": "Vladim\u00edr Gorej",
+        "name": "Vladimír Gorej",
         "github": "char0n",
         "linkedin": "vladimirgorej",
         "slack": "U03NV5L4S49",
@@ -856,7 +860,7 @@
         "githubID": 214812239
     },
     {
-        "name": "Florian Gram\u00df",
+        "name": "Florian Gramß",
         "github": "gramss",
         "isTscMember": false,
         "repos": [
